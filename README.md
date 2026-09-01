@@ -2,6 +2,8 @@
 
 A comprehensive ROS 2 package for the simulation and physical control of a Differential Drive Autonomous Mobile Robot (AMR). This repository contains the complete software stack for hardware interfacing, teleoperation with kernel-level haptic feedback, and autonomous navigation using the Nav2 stack.
 
+🎥 **Demo Video:** [Watch the robot in action here!](https://lnkd.in/p/gS8p74vt)
+
 ## 🚀 Key Features
 * **Differential Drive Kinematics:** Custom `ros2_control` hardware interface utilizing Arduino/microcontrollers for precise wheel odometry and motor commands.
 * **Kernel-Level Haptic Teleoperation:** Bypasses standard ROS 2 joy nodes to directly interface with Linux `evdev`, providing real-time force-feedback (rumble) to the gamepad based on velocity limits.
