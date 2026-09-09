@@ -37,6 +37,16 @@ A comprehensive ROS 2 package for the simulation and physical control of a Diffe
 ### 1. Dependencies
 Ensure you have ROS 2 installed along with the required control and navigation packages:
 ```bash
+
+### 2. Workspace Setup
+Clone this repository into your ROS 2 workspace:
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone [https://github.com/vedangtripathi45/Autonomous-Mobile-Robot.git](https://github.com/vedangtripathi45/Autonomous-Mobile-Robot.git) vgr_sim
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
 sudo apt update
 sudo apt install ros-<distro>-ros2-control ros-<distro>-ros2-controllers ros-<distro>-navigation2 ros-<distro>-nav2-bringup
 sudo apt install libgraphicsmagick++-q16-12 python3-evdev joystick
