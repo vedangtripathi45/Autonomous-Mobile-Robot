@@ -40,3 +40,40 @@ Ensure you have ROS 2 installed along with the required control and navigation p
 sudo apt update
 sudo apt install ros-<distro>-ros2-control ros-<distro>-ros2-controllers ros-<distro>-navigation2 ros-<distro>-nav2-bringup
 sudo apt install libgraphicsmagick++-q16-12 python3-evdev joystick
+```
+### 2. Workspace Setup
+Clone this repository into your ROS 2 workspace:
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone [https://github.com/vedangtripathi45/Autonomous-Mobile-Robot.git](https://github.com/vedangtripathi45/Autonomous-Mobile-Robot.git) vgr_sim
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
+```
+
+## 🎮 Usage Guide
+
+### 1. Launching the Core Robot (URDF & Controllers)
+Starts the robot state publisher, loads the URDF, and spawns the `diff_cont` and `joint_broad` controllers.
+```bash
+ros2 launch vgr_sim bot.launch.py
+```
+
+### 2.Joystick Teleoperation
+Starts the joystick node to publish command velocities.
+```bash
+ros2 launch vgr_sim joy.launch.py
+```
+Axis 1: Linear velocity
+Axis 3: Angular velocity
+Button 5: Enable deadman switch
+Button 7: Turbo mode
+
+### 3. AMCL Localization & Map Loading
+To load a pre-saved map (e.g., arena_map) and initialize the AMCL particle filter for Nav2:
+```bash
+cd ~/ros2_ws/src/vgr_sim/scripts
+./map_load.sh
+```
+
