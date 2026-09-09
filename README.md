@@ -77,3 +77,9 @@ cd ~/ros2_ws/src/vgr_sim/scripts
 ./map_load.sh
 ```
 
+## 👨‍💻 Author
+**Vedang Tripathi**  
+*Undergraduate Researcher, Mechanical Engineering*  
+*Motilal Nehru National Institute of Technology (MNNIT) Allahabad*  
+*Coordinator, Robotics Club MNNIT*
+
