@@ -1,4 +1,4 @@
-# Autonomous Mobile Robot (AMR) Navigation & Teleop
+# Autonomous Mobile Robot (AMR) Navigation & Teleoperation
 
 A comprehensive ROS 2 package for the simulation and physical control of a Differential Drive Autonomous Mobile Robot (AMR). This repository contains the complete software stack for hardware interfacing, teleoperation with kernel-level haptic feedback, and autonomous navigation using the Nav2 stack.
 
